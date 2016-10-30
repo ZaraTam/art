@@ -3,7 +3,7 @@
 [Link](https://goo.gl/goAYis)
 <br>
 <br>
-Artwork powered by Artsy
+Artwork powered by Artsy<br>
 https://developers.artsy.net/
 <br>
 <br>
