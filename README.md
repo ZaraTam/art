@@ -1,9 +1,10 @@
 # Art of the moment
 
-[Link](https://goo.gl/goAYis)
+Not hosted at the moment
 <br>
 <br>
-Artwork powered by Artsy
+Artwork powered by Artsy<br>
+https://developers.artsy.net/
 <br>
 <br>
 <br>
