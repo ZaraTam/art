@@ -30,11 +30,11 @@ def get_xapp_token(client_id, client_secret):
 
 
 def randomize():
+# Number of artwork on Artsy = 26073
+# Last tried on 2016-10-01 at
+# https://developers.artsy.net/playground#!/artworks/GET_api_artworks_format
 
-    # Artsy number of artworks taken from: https://developers.artsy.net/
-    artwork_number = 26074
-
-    index = random.randrange(artwork_number)
+    index = random.randrange(26073)
     return index
 
 
