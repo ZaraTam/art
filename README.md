@@ -1,6 +1,6 @@
 # Art of the moment
 
-[Link](https://goo.gl/goAYis)
+Not hosted at the moment
 <br>
 <br>
 Artwork powered by Artsy<br>
