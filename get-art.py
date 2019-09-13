@@ -32,7 +32,7 @@ def get_xapp_token(client_id, client_secret):
 def randomize():
 
     # Artsy number of artworks taken from: https://developers.artsy.net/
-    artwork_number = 26074
+    artwork_number = 27577
 
     index = random.randrange(artwork_number)
     return index
