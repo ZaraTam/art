@@ -3,9 +3,20 @@
 Get a new piece of artwork when you refresh the page<br>
 Website: https://art-of-the-moment.herokuapp.com/
 
-A Flask web app hosted on Heroku
+Art of the moment is a Flask web app hosted on Heroku
 
-Artworks powered by [Artsy](https://www.artsy.net/) via its [Public API](https://developers.artsy.net/)
+Artworks are powered by [Artsy](https://www.artsy.net/) via its [Public API](https://developers.artsy.net/)
+<br>
+<br>
+
+## Requirements
+
+- Requests
+- Flask
+- Jinja2
+- Gunicorn
+<br>
+<br>
 
 ## Usage
 
@@ -24,6 +35,8 @@ pip install -r requirements.txt
 :bulb: You will need to sign up for an Artsy developer account to get your own `client ID` and `client secret`
 
 Set up config on Gunicorn or Heroku
+<br>
+<br>
 
 ## License
 
