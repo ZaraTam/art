@@ -16,7 +16,6 @@ Artworks are powered by [Artsy](https://www.artsy.net/) via its [Public API](htt
 - Jinja2
 - Gunicorn
 <br>
-<br>
 
 ## Usage
 
