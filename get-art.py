@@ -1,7 +1,7 @@
+import os
 import requests
 import json
 import random
-import configparser
 
 from collections import OrderedDict
 from flask import Flask, render_template, send_from_directory
@@ -11,12 +11,8 @@ app = Flask(__name__)
 
 def authenticate():
 
-    config = configparser.ConfigParser()
-    config.read("config/auth.ini")
-
-    client_id = config["Authentication"]["client_id"]
-    client_secret = config["Authentication"]["client_secret"]
-
+    client_id = os.getenv("client_id", None)
+    client_secret = os.getenv("client_secret", None)
     return client_id, client_secret
 
 
