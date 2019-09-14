@@ -1,7 +1,7 @@
 # Art of the moment
 
-Not hosted at the moment
+Hosted on Heroku: https://art-of-the-moment.herokuapp.com/
 <br>
 <br>
-Artwork powered by Artsy<br>
+Artworks powered by Artsy<br>
 https://developers.artsy.net/
