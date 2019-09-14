@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" itemscope itemtype="http://schema.org/Article">
+<html lang="en" itemscope itemtype="https://schema.org/Article">
 <head>
 
   <title>Art of the moment</title>
@@ -38,8 +38,8 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 
   <!-- Custom Fonts -->
-  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" type="text/css">
-  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic" type="text/css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" type="text/css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic" type="text/css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" type="text/css">
 
   <!-- Custom CSS -->
@@ -68,7 +68,7 @@
           <p>
             Refresh page to get a new piece of artwork.
           </p>
-          <a href="{{image_link}}" target="_blank"><img class="artwork" src="{{image_link}}" alt="{{title}}"></a>
+          <a href="{{image_link_normalized}}" target="_blank"><img class="artwork" src="{{image_link_larger}}" alt="{{title}}"></a>
           <p>
             Title: {{title}}<br>
             Date: {{date}}<br>
@@ -107,7 +107,7 @@
   <!-- SEO -->
   <script type="application/ld+json">
   {
-      "@context": "http://schema.org",
+      "@context": "https://schema.org",
       "@type": "Person",
       },
       "name": "Zara Tam",

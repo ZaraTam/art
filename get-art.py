@@ -61,14 +61,16 @@ def get_art_of_the_moment(xapp_token, index):
     title = "Unknown" if artwork["title"] == "" else artwork["title"]
     date = "Unknown" if artwork["date"] == "" else artwork["date"]
     artist = "Unknown" if get_artist(xapp_token, artwork["id"]) == "" else get_artist(xapp_token, artwork["id"])
-    image_link = "https://www.artsy.net/images/icon-152.png" if artwork["_links"]["image"]["href"] == "" else artwork["_links"]["image"]["href"].replace("{image_version}","larger")
+    image_link_larger = "https://www.artsy.net/images/icon-152.png" if artwork["_links"]["image"]["href"] == "" else artwork["_links"]["image"]["href"].replace("{image_version}","larger")
+    image_link_normalized = "https://www.artsy.net/images/icon-152.png" if artwork["_links"]["image"]["href"] == "" else artwork["_links"]["image"]["href"].replace("{image_version}","normalized")
     artsy_link = "https://www.artsy.net" if artwork["_links"]["permalink"]["href"] == "" else artwork["_links"]["permalink"]["href"]
 
     return {
         "title": title, 
         "date": date, 
         "artist": artist, 
-        "image_link": image_link, 
+        "image_link_larger": image_link_larger, 
+        "image_link_normalized": image_link_normalized, 
         "artsy_link": artsy_link
     }
 
