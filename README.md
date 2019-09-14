@@ -33,8 +33,11 @@ pip install -r requirements.txt
 
 :bulb: You will need to sign up for an Artsy developer account to get your own `client ID` and `client secret`
 
-Set up config on Gunicorn or Heroku
-<br>
+Run locally on Gunicorn
+
+```sh
+gunicorn get-art:app
+```
 <br>
 
 ## License
