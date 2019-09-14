@@ -11,11 +11,11 @@ Artworks powered by [Artsy](https://www.artsy.net/) via its [Public API](https:/
 
 Clone the application
 
-`git clone https://github.com/ZaraTam/art.git`
+```git clone https://github.com/ZaraTam/art.git```
 
 Install package dependencies
 
-`pip install -r requirements.txt`
+```pip install -r requirements.txt```
 
 :bulb: You will need to sign up for an Artsy developer account to get your own `client ID` and `client secret`
 
