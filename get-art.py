@@ -89,3 +89,7 @@ def send_css(path):
 @app.route("/config/<path>")
 def send_config(path):
     return send_from_directory("config", path)
+
+@app.errorhandler(Exception)
+def all_exception_handler(error):
+    return render()
