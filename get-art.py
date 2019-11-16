@@ -55,7 +55,7 @@ def get_art_of_the_moment(xapp_token, index):
     payload = {"xapp_token": xapp_token, "offset": index, "size": "1"}
     response = requests.get(url, params=payload)
     data = json.loads(response.text, object_pairs_hook=OrderedDict)
-
+    print("WORKS")
     artwork = data["_embedded"]["artworks"][0]
 
     title = "Unknown" if artwork["title"] == "" else artwork["title"]
@@ -86,10 +86,18 @@ def render():
 def send_css(path):
     return send_from_directory("css", path)
 
-@app.route("/config/<path>")
-def send_config(path):
-    return send_from_directory("config", path)
-
 @app.errorhandler(Exception)
 def all_exception_handler(error):
-    return render()
+    tries = 1
+    print("hello error")
+    for i in range(tries):
+        try:
+            print("Try:" + str(i))
+            return render()
+        except:
+            if i < tries - 1:
+                continue
+            else:
+                raise
+                return ""
+        # break
