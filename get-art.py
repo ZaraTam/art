@@ -85,19 +85,3 @@ def render():
 @app.route("/css/<path>")
 def send_css(path):
     return send_from_directory("css", path)
-
-@app.errorhandler(Exception)
-def all_exception_handler(error):
-    tries = 1
-    print("hello error")
-    for i in range(tries):
-        try:
-            print("Try:" + str(i))
-            return render()
-        except:
-            if i < tries - 1:
-                continue
-            else:
-                raise
-                return ""
-        # break
