@@ -1,6 +1,7 @@
 # Art of the moment
 
-Get a new piece of artwork when you refresh the page<br>
+Get a new piece of artwork when you refresh the page
+
 Website: https://art-of-the-moment.herokuapp.com/
 
 Art of the moment is a Flask web app hosted on Heroku
