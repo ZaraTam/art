@@ -11,6 +11,7 @@ Artworks are powered by [Artsy](https://www.artsy.net/) via its [Public API](htt
 
 ## Requirements
 
+- Python 3
 - Requests
 - Flask
 - Jinja2
@@ -19,13 +20,19 @@ Artworks are powered by [Artsy](https://www.artsy.net/) via its [Public API](htt
 
 ## Usage
 
-Clone the application
+### Clone the application
 
+Clone over HTTPS
 ```sh
 git clone https://github.com/ZaraTam/art.git
 ```
 
-Install package dependencies
+Clone over SSH
+```sh
+git clone git@github.com:ZaraTam/art.git
+```
+
+### Install package dependencies
 
 ```sh
 pip install -r requirements.txt
@@ -33,13 +40,13 @@ pip install -r requirements.txt
 
 :bulb: You will need to sign up for an Artsy developer account to get your own `client ID` and `client secret`
 
-Run locally on Gunicorn
+### Run locally on Gunicorn
 
 ```sh
 gunicorn get-art:app
 ```
 <br>
 
-## License
+## Licence
 
 This project is licensed under the GNU General Public License v3.0 - see [LICENSE](https://github.com/ZaraTam/art/blob/master/LICENSE) for details
