@@ -50,4 +50,4 @@ gunicorn get-art:app
 
 ## Licence
 
-This project is licensed under the GNU General Public License v3.0 - see [LICENSE](https://github.com/ZaraTam/art/blob/master/LICENSE) for details
+This project is licensed under the MIT License - see [LICENSE](https://github.com/ZaraTam/art/blob/master/LICENSE) for details
