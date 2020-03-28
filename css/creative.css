@@ -42,7 +42,7 @@ h6 {
 }
 
 h1 {
-    margin: 10rem 0rem;
+    margin: 80px 0px;
 }
 
 p {
@@ -107,8 +107,7 @@ li {
 .socialmedia {
   font-size: 30px;
   color: #888;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding: 10px 5px;
 }
 
 .socialmedia:hover {
