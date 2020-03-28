@@ -1,118 +1,26 @@
-<!DOCTYPE html>
-<html lang="en" itemscope itemtype="https://schema.org/Article">
-<head>
+{% extends "layout.html" %}
 
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-82402155-2"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+{% block content %}
 
-    gtag('config', 'UA-82402155-2');
-  </script>
-
-  <title>Art of the moment</title>
-
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Art of the moment">
-  <meta name="author" content="Zara Tam">
-
-  <!-- Twitter Card data -->
-  <meta name="twitter:card" content="https://d32dm0rphc51dk.cloudfront.net/8kT5mcmEW97rlV2-FKFsTw/square.jpg">
-  <meta name="twitter:creator" content="@ZaraTam">
-  <meta name="twitter:title" content="Art of the moment">
-  <meta name="twitter:description" content="Art of the moment powered by Artsy">
-  <!-- Twitter summary card with large image must be at least 280 x 150px -->
-  <meta name="twitter:image:src" content="https://d32dm0rphc51dk.cloudfront.net/8kT5mcmEW97rlV2-FKFsTw/larger.jpg">
-
-  <!-- Open Graph data -->
-  <meta property="og:title" content="Art of the moment" />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://goo.gl/goAYis" />
-  <meta property="og:image" content="https://d32dm0rphc51dk.cloudfront.net/8kT5mcmEW97rlV2-FKFsTw/larger.jpg" />
-  <meta property="og:description" content="Art of the moment powered by Artsy" />
-  <meta property="og:site_name" content="Art of the moment" />
-
-  <!-- Bootstrap latest compiled and minified CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
-  <!-- Custom Fonts -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" type="text/css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic" type="text/css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" type="text/css">
-
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="css/creative.css" type="text/css">
-
-  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-  <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-  <![endif]-->
-
-</head>
-
-<body id="page-top">
-
-  <section class="bg-primary">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12 text-center">
-          <h2 class="section-heading">Art of the moment</h2>
-          <hr>
-          <p>
-            Refresh page to get a new piece of artwork.
-          </p>
-          <a href="{{image_link_normalized}}" target="_blank"><img class="artwork" src="{{image_link_large}}" alt="{{title}}"></a>
-          <p>
-            Title: {{title}}<br>
-            Date: {{date}}<br>
-            Artist: {{artist}}<br>
-            <a href={{artsy_link}} target="_blank">More ...</a>
-          </p>
+    <section class="bg-primary">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <h2 class="section-heading">Art of the moment</h2>
+            <hr>
+            <p>
+              Refresh page to get a new piece of artwork.
+            </p>
+            <a href="{{ image_link_normalized }}" target="_blank"><img class="artwork" src="{{ image_link_large }}" alt="{{ title }}"></a>
+            <p>
+              Title: {{ title }}<br>
+              Date: {{ date }}<br>
+              Artist: {{ artist }}<br>
+              <a href={{ artsy_link }} target="_blank">More ...</a>
+            </p>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <footer class="text-center">
-    <div>
-      <p>
-      Artworks powered by <a href="https://www.artsy.net" target="_blank">Artsy</a>.<br>
-      Made by Zara Tam.
-      </p>
-    </div>
-    <div>
-      <ul>
-        <li><a href="https://zaratam.github.io/website/" target="_blank"><i class="fa fa-home socialmedia" aria-hidden="true"></i></a></li>
-        <li><a href="https://www.linkedin.com/in/zaratam" target="_blank"><i class="fa fa-linkedin-square socialmedia" aria-hidden="true"></i></a></li>
-        <li><a href="https://twitter.com/zaratam" target="_blank"><i class="fa fa-twitter-square socialmedia" aria-hidden="true"></i></a></li>
-        <li><a href="https://www.facebook.com/zara.tam" target="_blank"><i class="fa fa-facebook-square socialmedia" aria-hidden="true"></i></a></li>
-        <li><a href="https://github.com/zaratam/" target="_blank"><i class="fa fa-github-square socialmedia" aria-hidden="true"></i></a></li>
-      </ul>
-    </div>
-  </footer>
-
-  <!-- SEO -->
-  <script type="application/ld+json">
-  {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      },
-      "name": "Zara Tam",
-      "sameAs" : [
-      "https://zaratam.github.io/website/",
-      "https://uk.linkedin.com/in/zaratam",
-      "https://twitter.com/@ZaraTam",
-      "https://www.facebook.com/zara.tam",
-      "https://github.com/zaratam/",
-      ]
-  }
-  </script>
-
-</body>
-</html>
+{% endblock %}

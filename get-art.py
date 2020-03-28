@@ -5,14 +5,19 @@ import random
 
 from collections import OrderedDict
 from flask import Flask, render_template, send_from_directory
+from dotenv import load_dotenv
+
 
 app = Flask(__name__)
+
+load_dotenv()
 
 
 def authenticate():
 
     client_id = os.getenv("client_id", None)
     client_secret = os.getenv("client_secret", None)
+    print(client_id, client_secret)
     return client_id, client_secret
 
 
@@ -37,7 +42,7 @@ def randomize():
 def get_artist(xapp_token, artwork_id):
 
     url = "https://api.artsy.net/api/artists"
-    payload = {"xapp_token": xapp_token, "artwork_id" : artwork_id}
+    payload = {"xapp_token": xapp_token, "artwork_id": artwork_id}
     response = requests.get(url, params=payload)
     data = json.loads(response.text, object_pairs_hook=OrderedDict)
     
@@ -55,7 +60,7 @@ def get_art_of_the_moment(xapp_token, index):
     payload = {"xapp_token": xapp_token, "offset": index, "size": "1"}
     response = requests.get(url, params=payload)
     data = json.loads(response.text, object_pairs_hook=OrderedDict)
-    print("WORKS")
+
     artwork = data["_embedded"]["artworks"][0]
 
     title = "Unknown" if artwork["title"] == "" else artwork["title"]
@@ -85,3 +90,11 @@ def render():
 @app.route("/css/<path>")
 def send_css(path):
     return send_from_directory("css", path)
+
+@app.errorhandler(404)
+def page_not_found(error):
+    return render_template("404.html"), 404
+
+@app.errorhandler(500)
+def internal_error(error):
+    return render_template("500.html"), 500
